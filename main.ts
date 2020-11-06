@@ -3,10 +3,11 @@ namespace poitch2 {
     let initFlag = 0;
 
     function initSwitch(): void {
-        pins.digitalWritePin(DigitalPin.P2, 0)
-        pins.setPull(DigitalPin.P8, PinPullMode.PullUp)
-        pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
-        pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
+        pins.digitalWritePin(DigitalPin.P2, 0);
+        pins.setPull(DigitalPin.P8, PinPullMode.PullUp);
+        pins.setPull(DigitalPin.P12, PinPullMode.PullUp);
+        pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
+        initFlag=1;
     }
     /**
      * get switch data
