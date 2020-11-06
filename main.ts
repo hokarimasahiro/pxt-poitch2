@@ -3,10 +3,10 @@ namespace poitch2 {
     let initFlag = 0;
 
     function initSwitch(): void {
-        pins.digitalWritePin(DigitalPin.P2, 0);
-        pins.setPull(DigitalPin.P8, PinPullMode.PullUp);
-        pins.setPull(DigitalPin.P12, PinPullMode.PullUp);
-        pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
+        pins.digitalWritePin(DigitalPin.P2, 1);
+        pins.setPull(DigitalPin.P8, PinPullMode.PullDown);
+        pins.setPull(DigitalPin.P12, PinPullMode.PullDown);
+        pins.setPull(DigitalPin.P13, PinPullMode.PullDown);
         initFlag=1;
     }
     /**
@@ -18,7 +18,7 @@ namespace poitch2 {
 		if (initFlag == 0){
 			initSwitch();
 		}
-        if (pins.digitalReadPin(sw)==0){
+        if (pins.digitalReadPin(sw)==1){
             return true;
         } else {
             return false;
